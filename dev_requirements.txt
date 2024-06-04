@@ -1,6 +1,7 @@
 black<25
 isort<6
 mypy<2
+pydantic-settings<3
 pytest<9
 pytest-cov<6
 ruff<1
