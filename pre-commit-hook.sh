@@ -10,6 +10,6 @@
 
 isort --profile black . && \
 black . --verbose && \
-ruff . && \
+ruff check . && \
 mypy --strict . && \
 pytest --cov .
