@@ -1,0 +1,3 @@
+pydantic<3
+tabulate<1
+termcolor<3
