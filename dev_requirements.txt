@@ -5,3 +5,4 @@ pydantic-settings<3
 pytest<9
 pytest-cov<6
 ruff<1
+types-termcolor<2
