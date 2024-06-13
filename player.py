@@ -4,7 +4,7 @@ from termcolor import colored
 
 
 class Player(Enum):
-    """Class representing a player. 'MISSING' player represents empty slot on a board."""
+    """Class representing a player."""
 
     FIRST = 1
     SECOND = 2
