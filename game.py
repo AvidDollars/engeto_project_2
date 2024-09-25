@@ -1,3 +1,4 @@
+import itertools
 from dataclasses import dataclass
 from operator import itemgetter
 
@@ -11,7 +12,8 @@ class Game:
     """Class representing current state of Tic-Tac-Toe game."""
 
     _board: Board
-    current_player: Player = Player.FIRST
+    _players = itertools.cycle((Player.FIRST, Player.SECOND))
+    current_player: Player = next(_players)
 
     def __repr__(self) -> str:
         is_game_over, winner = self.is_game_over()
@@ -83,6 +85,4 @@ class Game:
         if game_over:
             return
 
-        self.current_player = (
-            Player.FIRST if self.current_player == Player.SECOND else Player.SECOND
-        )
+        self.current_player = next(self._players)
