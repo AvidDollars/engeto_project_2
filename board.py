@@ -86,7 +86,7 @@ class Board:
         try:
             position = int(position_str)
         except ValueError:
-            return (False, f"'{position}' is not valid number.")
+            return (False, f"'{position_str}' is not valid number.")
 
         if position < 1 or position > 9:
             return (False, "Not a valid number. Provide a number in range(1, 10)")
